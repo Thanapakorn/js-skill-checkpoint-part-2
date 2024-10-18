@@ -7,3 +7,8 @@ const students = [
 ];
 
 // เริ่มเขียนโค้ดตรงนี้
+const students50 = students
+  .filter((student) => student.score > 50)
+  .map((student) => (student.score += student.score * 0.1));
+const totalStudentScore = students50.reduce((total, score) => total + score, 0);
+console.log(totalStudentScore);
